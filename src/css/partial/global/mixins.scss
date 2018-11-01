@@ -1,0 +1,32 @@
+$text-color: #000000;
+@mixin font($font-size: 16px, $line-height: 24px, $font-weight: 400, $color: $text-color) {
+	font-size: $font-size;
+	line-height: $line-height;
+	font-weight: $font-weight;
+	color: $color;
+}
+
+%clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+%center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin container {
+	width: 1200px;
+	margin: 0 auto;
+  @media #{$tablet-widths} {
+		width: 768px;
+	}
+  @media #{$mobile-widths} {
+		width: 320px;
+	}
+}

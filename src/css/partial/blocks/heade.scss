@@ -1,0 +1,20 @@
+header {
+  font-family: "Open sans";
+  background-color: turquoise;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+div {
+  @extend %center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 100;
+}
+
+@media #{$tablet-widths} {
+  header {
+    background-color: midnightblue;
+  }
+}
