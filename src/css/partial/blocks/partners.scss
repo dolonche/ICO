@@ -1,0 +1,47 @@
+.partners {
+  &__wrapper {
+    background-color: #F2F6F9;
+  }
+  @extend %container;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  &__title {
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    color: #000;
+  }
+  &__item {
+    width: calc(33.333333% - 20px);
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-bottom: 25px;
+    &:nth-of-type(3n + 1){
+      margin-right: 0;
+    }
+    &-link {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+      margin-bottom: 10px;
+      color: #000;
+    }
+    &-descr{
+      line-height: 20px;
+    }
+  }
+}

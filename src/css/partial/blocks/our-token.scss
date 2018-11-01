@@ -1,0 +1,44 @@
+.our-token{
+  &__wrapper{
+    background-color: #F2F6F9;
+  }
+  @extend %container;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__title{
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  &__item{
+    width: calc(33.333333% - 20px);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    &-img{
+      width: 60px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &-title{
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    &-text{
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

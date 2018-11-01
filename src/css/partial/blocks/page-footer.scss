@@ -1,0 +1,39 @@
+.page-footer {
+  &__wrapper {
+    background-color: #103140;
+  }
+  @extend %container;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  &__social{
+    display: flex;
+    justify-content: space-between;
+    &-item{
+      display: flex;
+      flex-direction: column;
+      &-img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 40px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &-descr{
+        color: #fff;
+        margin-top: 6px;
+        font-weight: lighter;
+        font-size: 14px;
+      }
+    }
+  }
+  &__rights{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 25px;
+  }
+}

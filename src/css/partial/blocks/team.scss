@@ -1,0 +1,51 @@
+.team {
+  @extend %container;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__title {
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    color: #000;
+  }
+  &__item{
+    width: calc(33.333333% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    &-img{
+      width: 200px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+    &-name{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &-profession{
+      color: #E0CCAA;
+      font-size: 12px;
+    }
+    &-descr{
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: lighter;
+      line-height: 24px;
+    }
+  }
+}
