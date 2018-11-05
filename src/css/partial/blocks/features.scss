@@ -37,3 +37,10 @@
     }
   }
 }
+@media #{$mobile-widths}{
+  .features{
+    &__item{
+      width: calc(50% - 10px);
+    }
+  }
+}

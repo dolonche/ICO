@@ -49,3 +49,11 @@
     }
   }
 }
+@media #{$mobile-widths}{
+  .team{
+    flex-direction: column;
+    &__item{
+      width: 100%;
+    }
+  }
+}

@@ -42,3 +42,11 @@
     }
   }
 }
+@media #{$mobile-widths}{
+  .parameters{
+    flex-direction: column;
+    &__item{
+      width: 100%;
+    }
+  }
+}

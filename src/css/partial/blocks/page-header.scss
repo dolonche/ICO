@@ -2,7 +2,7 @@
   &__wrapper {
     width: 100vw;
     height: 100vh;
-    background-color: #93A09A;
+    background-color: #19313E;
     background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .06) 2px, transparent 0, transparent 40px), repeating-linear-gradient(-180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .06) 2px, transparent 0, transparent 40px);
     background-size: 50px 50px;
     box-shadow: inset 0px 0px 125px rgba(0, 0, 0, 0.6);
@@ -12,12 +12,28 @@
   height: 100%;
   &__logo{
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 20px;
+    &-image{
+      width: 200px;
+      height: auto;
+    }
   }
   &__title{
     @extend %center;
     font-size: 44px;
-    color: #404040;
+    color: #fff;
+  }
+}
+@media #{$mobile-widths}{
+  .page-header{
+    &__logo{
+      left: 0;
+      width: 100%;
+      background-color: #19313E;
+      &-image{
+        width: 100px;
+      }
+    }
   }
 }

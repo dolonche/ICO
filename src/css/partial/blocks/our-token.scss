@@ -42,3 +42,10 @@
     }
   }
 }
+@media #{$mobile-widths}{
+  .our-token{
+    &__item{
+      width: 100%;
+    }
+  }
+}

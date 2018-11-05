@@ -43,3 +43,11 @@
     }
   }
 }
+@media #{$mobile-widths}{
+  .technologies{
+    flex-direction: column;
+    &__item{
+      width: 100%;
+    }
+  }
+}

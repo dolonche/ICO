@@ -1,6 +1,16 @@
 <div class="page-header__wrapper">
   <header class="page-header">
-    <div class="page-header__logo"><img src="" alt="logo" class="page-header__logo-image"></div>
+    <div class="page-header__logo"><img src="img/logo.svg" alt="logo" class="page-header__logo-image"></div>
     <div class="page-header__title">Lorem ipsum dolor sit.</div>
+    <nav class="main-nav main-nav--closed">
+     <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item"><a href="#" onclick="$('.our-token').animatescroll();">About</a></li>
+        <li class="main-nav__list-item"><a href="#" onclick="$('.token-distribution').animatescroll();">Token</a></li>
+        <li class="main-nav__list-item"><a href="#" onclick="$('.team').animatescroll();">Team</a></li>
+        <li class="main-nav__list-item"><a href="#" onclick="$('.features').animatescroll();">Why</a></li>
+        <li class="main-nav__list-item"><a href="#" onclick="$('.feedback-form').animatescroll();">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 </div>
