@@ -1,6 +1,6 @@
 .main-nav {
   position: absolute;
-  width: 60%;
+  width: 75%;
   right: 0;
   top: 45px;
   &__toggle {
@@ -16,7 +16,7 @@
     &-item {
       a {
         text-decoration: none;
-        font-weight: bold;
+        text-transform: uppercase;
         color: #fff;
         font-size: 20px;
       }

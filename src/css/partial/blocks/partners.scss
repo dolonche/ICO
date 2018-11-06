@@ -1,6 +1,6 @@
 .partners {
   &__wrapper {
-    background-color: #F2F6F9;
+    background-color: #fff;
   }
   @extend %container;
   padding-left: 20px;
@@ -42,6 +42,15 @@
     }
     &-descr{
       line-height: 20px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
     }
   }
 }
