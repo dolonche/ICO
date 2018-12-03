@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link href="css/desktop.css" rel="stylesheet">
+  <link href="css/mobile.css" rel="stylesheet">
+  <script src="jsVendor/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+  <script src="jsVendor/Site.js"></script>
+  <script src="jsVendor/DataManager.js"></script>
+  <script src="jsVendor/ModelManager.js"></script>
+  <script src="jsVendor/CanvasManager.js"></script>
+  <script src="jsVendor/gl-matrix.js"></script>
+  <script src="jsVendor/Camera.js"></script>
+  <script src="jsVendor/Program.js"></script>
+  <script src="jsVendor/ProgramManager.js"></script>
+  <script src="jsVendor/TextureManager.js"></script>
+  <script src="jsVendor/PointGlobeDrawable.js"></script>
+  <script src="jsVendor/NebulaDrawable.js"></script>
+  <script src="jsVendor/BokehDrawable.js"></script>
+  <script src="jsVendor/BackgroundDrawable.js"></script>
+  <script src="jsVendor/RingDrawable.js"></script>
+  <script src="jsVendor/EarthquakeDrawable.js"></script>
+  <script src="jsVendor/BigQuakeDrawable.js"></script>
+  <script src="jsVendor/Model.js"></script>
+  <script src="jsVendor/LatLng.js"></script>
+  <script src="jsVendor/ProjectionUtil.js"></script>
+  <script src="jsVendor/Animation.js"></script>
+  <script src="jsVendor/Ease.js"></script>
+  <script src="jsVendor/Ajax.js"></script>
+  <script src="jsVendor/Signal.js"></script>
+  <script src="jsVendor/SplitText.js"></script>
+  <script src="jsVendor/TweenMax.js"></script>
+  <!-- ###EndUncompressedJS### -->
+  <!-- ###BeginCompressedJS### -->
+  <!--<script src="/static/minified/globekit-js.min.min.js"></script>-->
+  <!-- ###EndCompressedJS### -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500&amp;subset=latin" media="all">
+</head>
+
+<body class="page">
+  <header class="page-header">
+    <div class="page-header__logo">
+      <picture>
+        <source media="(max-width: 768px)" srcset="img/logomobile.svg">
+        <img src="img/logo.svg" alt="" class="page-header__logo-image"></picture>
+    </div>
+    <nav class="main-nav main-nav--closed">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
+          <a href="index.html">Интернет-магазинам</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="digital.html">Диджитал-агенствам</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="invest.html">Инвестиционным компаниям</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<!--
+  <section id="barba-wrapper">
+    <div class="barba-container middle animated fadeInRight">
+-->
+      <div class="screen__wrapper">
+        <section class="screen">
+
+          <div class="screen__title">
+            DealFin - оплата всеми способами на вашем сайте уже сегодня
+          </div>
+          <a href="#" class="screen__mouse" onclick="$('#section-1').animatescroll();"><img src="img/mouse.svg" alt=""></a>
+
+          <div id="quake-info" style="transform: translate3d(405.44px, 571.842px, 0px);">
+            <div><span class="in"><strong></strong></span></div>
+          </div>
+
+          <canvas id="globekit-canvas" width="965" height="1460"></canvas>
+        </section>
+      </div>
+      <div class="title-section" id="section-1">Плюсы работы с нами</div>
+      <div class="advantages__wrapper">
+        <section class="advantages">
+          <div class="advantages__item wow bounceInLeft" data-wow-delay="0.2s"> Консультирование Ваших IT- специалистов</div>
+          <div class="advantages__item wow bounceInRight" data-wow-delay="0.23s">Anti-fraud system</div>
+          <div class="advantages__item wow bounceInLeft" data-wow-delay="0.26s">Минимальный пакет документов</div>
+          <div class="advantages__item wow bounceInRight" data-wow-delay="0.29s">Безопасность уровня 3DS</div>
+          <div class="advantages__item wow bounceInLeft" data-wow-delay="0.32s">Высокая конверсия платежей</div>
+          <div class="advantages__item wow bounceInRight" data-wow-delay="0.35s">Выгодные тарифы</div>
+          <div class="advantages__item wow bounceInLeft" data-wow-delay="0.38s">Персональный менеджер</div>
+          <div class="advantages__item wow bounceInRight" data-wow-delay="0.41s">Зачисление средств на следующий рабочий день</div>
+          <div class="advantages__item wow bounceInLeft" data-wow-delay="0.44s">Операции отмены и возврата — в три клика</div>
+          <div class="advantages__item wow bounceInRight" data-wow-delay="0.47s">Бесплатное подключение</div>
+          <div class="advantages__item wow bounceInLeft" data-wow-delay="0.5s">Ручное выставление счета, рекуррентные платежи</div>
+          <div class="advantages__item wow bounceInRight" data-wow-delay="0.53s">Оперативная интеграция</div>
+        </section>
+      </div>
+      <div class="title-section">Основные преимущества</div>
+      <div class="main-plus__wrapper">
+        <section class="main-plus">
+          <div class="main-plus__item wow zoomIn" data-wow-offset="150" data-wow-delay="0.1s"><img src="img/advantage-function.svg" alt=""><span>Автоплатежи</span></div>
+          <div class="main-plus__item wow zoomIn" data-wow-offset="150" data-wow-delay="0.1s"><img src="img/advantage-lock.svg" alt=""><span>Гарантия сохранности данных</span></div>
+          <div class="main-plus__item wow zoomIn" data-wow-offset="150" data-wow-delay="0.1s"><img src="img/advantage-money.svg" alt=""><span>Бесплатное подключение</span></div>
+          <div class="main-plus__item wow zoomIn" data-wow-offset="150" data-wow-delay="0.1s"><img src="img/advantage-like.svg" alt=""><span>Быстрое подключение через API</span></div>
+        </section>
+      </div>
+      <div class="title-section">Вознаграждение, в % от прибыли нашей компании</div>
+      <div class="rate__wrapper">
+        <section class="rate">
+          <div class="rate-item__wrapper">
+            <div class="rate-item wow fadeInUp" data-wow-offset="260" data-wow-delay="0.1s">
+              <h3 class="rate-item__title">10%</h3>
+              <p class="rate-item__descr">
+                Оборот до 100 000$ в месяц
+              </p>
+              <a href="registration.html" class="rate-item__button">
+              Подключиться
+            </a>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#1C6BF5" points="0,0 50,100 100,0"/>
+            </svg>
+            </div>
+            <div class="rate-item wow fadeInUp" data-wow-offset="260" data-wow-delay="0.2s">
+              <h3 class="rate-item__title">20%</h3>
+              <p class="rate-item__descr">
+                Оборот до 200 000$ в месяц
+              </p>
+              <a href="registration.html" class="rate-item__button">
+              Подключиться
+            </a>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#1C6BF5" points="0,0 50,100 100,0"/>
+            </svg>
+            </div>
+            <div class="rate-item wow fadeInUp" data-wow-offset="260" data-wow-delay="0.3s">
+              <h3 class="rate-item__title">30%</h3>
+              <p class="rate-item__descr">
+                Оборот до 300 000$ в месяц</p>
+              <a href="registration.html" class="rate-item__button">
+              Подключиться
+            </a>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#1C6BF5" points="0,0 50,100 100,0"/>
+            </svg>
+            </div>
+            <div class="rate-item wow fadeInUp" data-wow-offset="260" data-wow-delay="0.4s">
+              <h3 class="rate-item__title">Индивидуально</h3>
+              <p class="rate-item__descr">
+                Оборот более 300 000$ в месяц</p>
+              <a href="registration.html" class="rate-item__button">
+              Подключиться
+            </a>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#1C6BF5" points="0,0 50,100 100,0"/>
+            </svg>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="title-section title-section--white">Способы оплаты</div>
+      <div class="payment-methods__wrapper">
+        <section class="payment-methods">
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.05s"><img src="img/visa.svg" alt="" title="visa"></div>
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.1s"><img src="img/mastercard.svg" alt="" title="mastercard"></div>
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.15s"><img src="img/yandex.svg" alt="" title="яндекс.деньги"></div>
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.2s"><img src="img/maestro.svg" alt="" title="maestro"></div>
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.25s"><img src="img/mir.svg" alt="" title="мир"></div>
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.3s"><img src="img/qiwi.svg" alt="" title="qiwi"></div>
+          <div class="payment-methods__item wow fadeInUp" data-wow-offset="50" data-wow-delay="0.35s"><img src="img/webmoney.svg" alt="" title="webmoney"></div>
+        </section>
+      </div>
+      <div class="title-section">Обратная связь</div>
+      <div class="feedback__wrapper">
+        <section class="feedback">
+          <div class="feedback-form__wrapper">
+            <form action="" class="feedback-form">
+              <div class="feedback-form__item wow fadeInUp" data-wow-offset="50">
+                <label for="">Имя</label><input type="text">
+              </div>
+              <div class="feedback-form__item wow fadeInUp" data-wow-offset="50">
+                <label for="">Телефон</label><input type="tel">
+              </div>
+              <div class="feedback-form__item wow fadeInUp" data-wow-offset="50">
+                <label for="">Email</label><input type="email">
+              </div>
+              <textarea name="" id="" cols="30" rows="10" placeholder="Задайте ваш вопрос" class="wow fadeInUp" data-wow-offset="50"></textarea>
+              <button type="submit" class="wow fadeInUp" data-wow-offset="50">Отправить</button>
+            </form>
+          </div>
+        </section>
+      </div>
+<!--
+    </div>
+  </section>
+-->
+  <div class="page-footer__wrapper">
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <img src="img/logo.svg" alt="">
+      </div>
+      <div class="page-footer__tel">
+        <a href="tel:74993807500">+7-499-380-75-00</a>
+      </div>
+      <div class="page-footer__mail">
+        <a href="mailto:info@dealfin.ru">info@dealfin.ru</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    $('#PHONE').inputmask('+7(999)999-99-99');
+
+    Site.init();
+
+    WebFontConfig = {
+      google: {
+        families: ["Roboto:100,300,500:latin"]
+      },
+      /* Called when all the specified web-font provider modules (google, typekit, and/or custom) have reported that they have started loading fonts. */
+      loading: function() {
+        // do something
+      },
+      /* Called when each requested web font has started loading. The fontFamily parameter is the name of the font family, and fontDescription represents the style and weight of the font. */
+      fontloading: function(fontFamily, fontDescription) {
+        // do something
+      },
+      /* Called when each requested web font has finished loading. The fontFamily parameter is the name of the font family, and fontDescription represents the style and weight of the font. */
+      fontactive: function(fontFamily, fontDescription) {
+        // do something
+      },
+      /* Called if a requested web font failed to load. The fontFamily parameter is the name of the font family, and fontDescription represents the style and weight of the font. */
+      fontinactive: function(fontFamily, fontDescription) {
+        // do something
+      },
+      /* Called when all of the web fonts have either finished loading or failed to load, as long as at least one loaded successfully. */
+      active: function() {
+        setTimeout(function() {
+          Site.fontsDidActivate();
+        }, 250);
+      },
+      /* Called if the browser does not support web fonts or if none of the fonts could be loaded. */
+      inactive: function() {
+        setTimeout(function() {
+          Site.fontsDidActivate();
+        }, 250);
+      }
+    };
+  </script>
+
+  <!-- Self hosting this part, for Ghostery's sake -->
+  <script src="jsVendor/WebFontLoader.js"></script>
+  <style id="extraClass">
+    .extraClassAspect {
+      -webkit-transform: scaleX(1)!important;
+    }
+
+    .extraClassCrop {
+      -webkit-transform: scale(1)!important;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/animatescroll.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

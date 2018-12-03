@@ -1,13 +1,17 @@
 @font-face {
-  font-family: "Open sans";
-  font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/opensans.woff2), url(../fonts/opensans.woff);
+  font-family: "Roboto";
+  font-weight: 100;
+  src: url(../fonts/Roboto-Light.ttf);
 }
 
 @font-face {
-  font-family: "Open sans";
-  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
   font-weight: 700;
-  src: url(../fonts/opensansbold.woff2), url(../fonts/opensansbold.woff);
+  src: url(../fonts/Roboto-Bold.ttf);
 }

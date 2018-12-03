@@ -3,16 +3,59 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/desktop.css" rel="stylesheet">
+  <link href="css/mobile.css" rel="stylesheet">
+  <script src="jsVendor/jquery-1.10.2.js"></script>
+  <script src="jsVendor/Site.js"></script>
+  <script src="jsVendor/DataManager.js"></script>
+  <script src="jsVendor/ModelManager.js"></script>
+  <script src="jsVendor/CanvasManager.js"></script>
+  <script src="jsVendor/gl-matrix.js"></script>
+  <script src="jsVendor/Camera.js"></script>
+  <script src="jsVendor/Program.js"></script>
+  <script src="jsVendor/ProgramManager.js"></script>
+  <script src="jsVendor/TextureManager.js"></script>
+  <script src="jsVendor/PointGlobeDrawable.js"></script>
+  <script src="jsVendor/NebulaDrawable.js"></script>
+  <script src="jsVendor/BokehDrawable.js"></script>
+  <script src="jsVendor/BackgroundDrawable.js"></script>
+  <script src="jsVendor/RingDrawable.js"></script>
+  <script src="jsVendor/EarthquakeDrawable.js"></script>
+  <script src="jsVendor/BigQuakeDrawable.js"></script>
+  <script src="jsVendor/Model.js"></script>
+  <script src="jsVendor/LatLng.js"></script>
+  <script src="jsVendor/ProjectionUtil.js"></script>
+  <script src="jsVendor/Animation.js"></script>
+  <script src="jsVendor/Ease.js"></script>
+  <script src="jsVendor/Ajax.js"></script>
+  <script src="jsVendor/Signal.js"></script>
+  <script src="jsVendor/TweenMax.js"></script>
 </head>
 
 <body class="page-body">
   <div class="page-header__wrapper">
     <header class="page-header">
       <div class="page-header__logo"><img src="img/logo.svg" alt="logo" class="page-header__logo-image"></div>
-      <div class="page-header__title"><span>Bablocoin</span> <span>blockchain</span> <span>app platform</span></div>
+      <div class="page-header__title">
+        <div class="screen__wrapper">
+          <section class="screen">
+  
+            <div class="screen__title">
+              Bablocoin blockchain app platform
+            </div>
+            <a href="#" class="screen__mouse" onclick="$('.our-token').animatescroll();"><img src="img/mouse.svg" alt=""></a>
+  
+            <div id="quake-info" style="transform: translate3d(405.44px, 571.842px, 0px);">
+              <div><span class="in"><strong></strong></span></div>
+            </div>
+  
+            <canvas id="globekit-canvas" width="965" height="1460"></canvas>
+          </section>
+        </div>
+      </div>
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
@@ -20,7 +63,8 @@
           <li class="main-nav__list-item"><a href="#" onclick="$('.token-distribution').animatescroll();">Token</a></li>
           <li class="main-nav__list-item"><a href="#" onclick="$('.team').animatescroll();">Team</a></li>
           <li class="main-nav__list-item"><a href="#" onclick="$('.features').animatescroll();">Why</a></li>
-          <li class="main-nav__list-item"><a href="#" onclick="$('.feedback-form').animatescroll();">Contact</a></li>  <li class="main-nav__list-item"><a href="#">Whitepaper</a></li>
+          <li class="main-nav__list-item"><a href="#" onclick="$('.feedback-form').animatescroll();">Contact</a></li>
+          <li class="main-nav__list-item"><a href="#">Whitepaper</a></li>
         </ul>
       </nav>
     </header>
@@ -36,22 +80,22 @@
       <div class="our-token__item wow fadeInUp" data-wow-offset="25">
         <img src="img/value.png" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Value Token</b>
-        <p class="our-token__item-text">A value Token that can be used to become a member of the SPORTCO Global Club.</p>
+        <p class="our-token__item-text">A value Token that can be used to become a member of the Bablocoin Global Club.</p>
       </div>
       <div class="our-token__item wow fadeInUp" data-wow-offset="25">
-        <img src="img/media.svg" alt="" class="our-token__item-img">
-        <b class="our-token__item-title">Lorem ipsum.</b>
-        <p class="our-token__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat soluta.</p>
+        <img src="img/lock.svg" alt="" class="our-token__item-img">
+        <b class="our-token__item-title">Secure Storage</b>
+        <p class="our-token__item-text">We store the vast majority of the digital assets in secure offline storage.</p>
       </div>
       <div class="our-token__item wow fadeInUp" data-wow-offset="25">
         <img src="img/payouts.png" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Regular Payouts</b>
-        <p class="our-token__item-text">Receive Regular Payouts to your SPORTCO Wallet on contribution of content or reaching a performance milestone.</p>
+        <p class="our-token__item-text">Receive Regular Payouts to your Bablocoin Wallet on contribution of content or reaching a performance milestone.</p>
       </div>
       <div class="our-token__item wow fadeInUp" data-wow-offset="25">
-        <img src="img/media.svg" alt="" class="our-token__item-img">
-        <b class="our-token__item-title">Lorem ipsum.</b>
-        <p class="our-token__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat soluta.</p>
+        <img src="img/protect.svg" alt="" class="our-token__item-img">
+        <b class="our-token__item-title">Safe & Secure</b>
+        <p class="our-token__item-text">We take careful measures to ensure that your coin is as safe as possible. Offline storage provides an important security measure against theft or loss.</p>
       </div>
       <div class="our-token__item wow fadeInUp" data-wow-offset="25">
         <img src="img/peer-to-peer.png" alt="" class="our-token__item-img">
@@ -193,7 +237,9 @@
       <div class="page-footer__rights">2018 | BABLOCOIN | ALL RIGHT RESERVED</div>
     </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    Site.init();
+  </script>
   <script src="js/wow.min.js"></script>
   <script src="js/animatescroll.min.js"></script>
   <script src="js/main.min.js"></script>

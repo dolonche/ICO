@@ -1,7 +1,23 @@
 <div class="page-header__wrapper">
   <header class="page-header">
     <div class="page-header__logo"><img src="img/logo.svg" alt="logo" class="page-header__logo-image"></div>
-    <div class="page-header__title"><span>Bablocoin</span> <span>blockchain</span> <span>app platform</span></div>
+    <div class="page-header__title">
+      <div class="screen__wrapper">
+        <section class="screen">
+
+          <div class="screen__title">
+            Bablocoin blockchain app platform
+          </div>
+          <a href="#" class="screen__mouse" onclick="$('.our-token').animatescroll();"><img src="img/mouse.svg" alt=""></a>
+
+          <div id="quake-info" style="transform: translate3d(405.44px, 571.842px, 0px);">
+            <div><span class="in"><strong></strong></span></div>
+          </div>
+
+          <canvas id="globekit-canvas" width="965" height="1460"></canvas>
+        </section>
+      </div>
+    </div>
     <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
@@ -9,7 +25,8 @@
         <li class="main-nav__list-item"><a href="#" onclick="$('.token-distribution').animatescroll();">Token</a></li>
         <li class="main-nav__list-item"><a href="#" onclick="$('.team').animatescroll();">Team</a></li>
         <li class="main-nav__list-item"><a href="#" onclick="$('.features').animatescroll();">Why</a></li>
-        <li class="main-nav__list-item"><a href="#" onclick="$('.feedback-form').animatescroll();">Contact</a></li>  <li class="main-nav__list-item"><a href="#">Whitepaper</a></li>
+        <li class="main-nav__list-item"><a href="#" onclick="$('.feedback-form').animatescroll();">Contact</a></li>
+        <li class="main-nav__list-item"><a href="#">Whitepaper</a></li>
       </ul>
     </nav>
   </header>
