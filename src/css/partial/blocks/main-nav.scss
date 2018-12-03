@@ -1,11 +1,8 @@
 .main-nav {
+  position: absolute;
   width: 75%;
   right: 0;
-  margin-top: 45px;
-  margin-left: auto;
-  width: calc(100% - 100px);
-  max-height: 200px;
-  z-index: 1000;
+  top: 45px;
   &__toggle {
     display: none;
   }
@@ -17,31 +14,11 @@
     width: 100%;
     justify-content: space-between;
     &-item {
-      display: flex;
       a {
         text-decoration: none;
         text-transform: uppercase;
         color: #fff;
         font-size: 20px;
-        font-weight: 100;
-        position: relative;
-        overflow-y: hidden;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        box-sizing: border-box;
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 30px;
-          background-color: #fff;
-          height: 4px;
-          width: 100%;
-          transition: 0.4s all;
-        }
-        &:hover::after {
-          transform: translateY(-3px);
-        }
       }
     }
   }
@@ -53,24 +30,18 @@
     &__list {
       flex-direction: column;
       position: absolute;
-      background-color: rgba(63, 93, 135, 0.9);
+      background-color: #19313E;
+      padding-top: 20px;
       top: 10px;
-      left: 0;
-      transition: 0.4s transform;
-      height: 100%;
-      box-sizing: border-box;
-      padding-top: 120px;
-      padding-bottom: 10px;
-      justify-content: flex-start;
       &-item {
-        padding-left: 52px;
-        box-sizing: border-box;
         margin-bottom: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
       }
     }
     &--opened {
       .main-nav__list {
-        transform: translateY(-10px);
+        transform: translateY(0);
       }
     }
     &--closed {
@@ -87,12 +58,11 @@
       font-size: 0;
       border: none;
       right: 20px;
-      top: 50px;
+      top: -19px;
       transition: 0.4s all;
       z-index: 999;
       visibility: visible;
       outline: none;
-      z-index: 4000;
       &::before,
       &::after {
         content: "";
@@ -111,7 +81,7 @@
       }
       &--open {
         background-color: transparent;
-        top: 56px;
+        top: -14px;
         &::after {
           transform: rotate(45deg) translate(-10px, -10px);
         }

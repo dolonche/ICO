@@ -1,11 +1,10 @@
 .screen {
   width: 100%;
   height: 100%; //  background-image: linear-gradient(0deg, #fff, #3972E4);
-  position: relative;
   filter: grayscale(0.25);
-  canvas#globekit-canvas {
-    height: 100vh;
+  &__wrapper{
     width: 100%;
+    height: 100%;
   }
   &__title {
     @extend %center;
@@ -34,21 +33,16 @@
   }
 }
 
-@media #{$tablet-widths} {
-  .screen {
-    height: calc(100vh - 78px);
-    canvas#globekit-canvas {
-      height: calc(100vh - 78px);
-    }
-  }
-}@media #{$mobile-widths} {
+@media #{$tablet-widths} {}
+
+@media #{$mobile-widths} {
   .screen {
     height: 100vh;
-    canvas#globekit-canvas {
-      height: 100vh;
-    }
-    &__title{
+    &__title {
       font-size: 46px;
+    }
+    &__mouse{
+      bottom: 20px;
     }
   }
 }

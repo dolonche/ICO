@@ -6,33 +6,6 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/styles.min.css" rel="stylesheet">
-  <link href="css/desktop.css" rel="stylesheet">
-  <link href="css/mobile.css" rel="stylesheet">
-  <script src="jsVendor/jquery-1.10.2.js"></script>
-  <script src="jsVendor/Site.js"></script>
-  <script src="jsVendor/DataManager.js"></script>
-  <script src="jsVendor/ModelManager.js"></script>
-  <script src="jsVendor/CanvasManager.js"></script>
-  <script src="jsVendor/gl-matrix.js"></script>
-  <script src="jsVendor/Camera.js"></script>
-  <script src="jsVendor/Program.js"></script>
-  <script src="jsVendor/ProgramManager.js"></script>
-  <script src="jsVendor/TextureManager.js"></script>
-  <script src="jsVendor/PointGlobeDrawable.js"></script>
-  <script src="jsVendor/NebulaDrawable.js"></script>
-  <script src="jsVendor/BokehDrawable.js"></script>
-  <script src="jsVendor/BackgroundDrawable.js"></script>
-  <script src="jsVendor/RingDrawable.js"></script>
-  <script src="jsVendor/EarthquakeDrawable.js"></script>
-  <script src="jsVendor/BigQuakeDrawable.js"></script>
-  <script src="jsVendor/Model.js"></script>
-  <script src="jsVendor/LatLng.js"></script>
-  <script src="jsVendor/ProjectionUtil.js"></script>
-  <script src="jsVendor/Animation.js"></script>
-  <script src="jsVendor/Ease.js"></script>
-  <script src="jsVendor/Ajax.js"></script>
-  <script src="jsVendor/Signal.js"></script>
-  <script src="jsVendor/TweenMax.js"></script>
 </head>
 
 <body class="page-body">
@@ -47,12 +20,6 @@
               Bablocoin blockchain app platform
             </div>
             <a href="#" class="screen__mouse" onclick="$('.our-token').animatescroll();"><img src="img/mouse.svg" alt=""></a>
-  
-            <div id="quake-info" style="transform: translate3d(405.44px, 571.842px, 0px);">
-              <div><span class="in"><strong></strong></span></div>
-            </div>
-  
-            <canvas id="globekit-canvas" width="965" height="1460"></canvas>
           </section>
         </div>
       </div>
@@ -72,32 +39,32 @@
   <div class="our-token__wrapper">
     <div class="our-token">
       <div class="our-token__title">Our token</div>
-      <div class="our-token__item wow fadeInUp" data-wow-offset="25">
+      <div class="our-token__item wow fadeInUp">
         <img src="img/utility.png" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Utility Token</b>
         <p class="our-token__item-text">A Token that can be used to buy Sports Merchandise, Memorabilia & Tickets at special prices on our online marketplace.</p>
       </div>
-      <div class="our-token__item wow fadeInUp" data-wow-offset="25">
+      <div class="our-token__item wow fadeInUp">
         <img src="img/value.png" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Value Token</b>
         <p class="our-token__item-text">A value Token that can be used to become a member of the Bablocoin Global Club.</p>
       </div>
-      <div class="our-token__item wow fadeInUp" data-wow-offset="25">
+      <div class="our-token__item wow fadeInUp">
         <img src="img/lock.svg" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Secure Storage</b>
         <p class="our-token__item-text">We store the vast majority of the digital assets in secure offline storage.</p>
       </div>
-      <div class="our-token__item wow fadeInUp" data-wow-offset="25">
+      <div class="our-token__item wow fadeInUp">
         <img src="img/payouts.png" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Regular Payouts</b>
         <p class="our-token__item-text">Receive Regular Payouts to your Bablocoin Wallet on contribution of content or reaching a performance milestone.</p>
       </div>
-      <div class="our-token__item wow fadeInUp" data-wow-offset="25">
+      <div class="our-token__item wow fadeInUp">
         <img src="img/protect.svg" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Safe & Secure</b>
         <p class="our-token__item-text">We take careful measures to ensure that your coin is as safe as possible. Offline storage provides an important security measure against theft or loss.</p>
       </div>
-      <div class="our-token__item wow fadeInUp" data-wow-offset="25">
+      <div class="our-token__item wow fadeInUp">
         <img src="img/peer-to-peer.png" alt="" class="our-token__item-img">
         <b class="our-token__item-title">Peer To Peer</b>
         <p class="our-token__item-text">You can exchange the Token with other Sports fans on our sports platforms for competing or challenging in any of our Sports Games.</p>
@@ -107,12 +74,12 @@
   <div class="token-distribution__wrapper">
     <div class="token-distribution">
       <div class="token-distribution__title">Token distribution</div>
-      <div class="token-distribution__left wow fadeInLeft" data-wow-offset="25">
+      <div class="token-distribution__left wow zoomIn" data-wow-offset="25">
         <img src="img/logo.svg" alt="logo" class="token-distribution__left-img">
         <b class="token-distribution__left-title">Token</b>
         <a href="" class="token-distribution__left-link">Link</a>
       </div>
-      <div class="token-distribution__right wow fadeInRight" data-wow-offset="25">
+      <div class="token-distribution__right wow zoomIn" data-wow-offset="25">
         <div class="token-distribution__right-value">
           <span>AVAILABLE TOKENS IN WAVE 1 FOR COMMUNITY-FUNDING
 </span><span>1 500 000</span>
@@ -142,7 +109,6 @@
         <b>COINCO</b>
         <p><span>Wave 1 Supply of Tokens:</span><span>1 500 000</span></p>
       </div>
-      <!--      <div class="parameters__image wow zoomIn" data-wow-offset="25"><img src="https://sportco.io/img/token-allocation-trans3.png" alt=""></div>-->
     </div>
   </div>
   <div class="team__wrapper">
@@ -173,16 +139,8 @@
     <div class="technologies">
       <div class="technologies__title">Our technologies</div>
       <div class="technologies__item wow fadeIn" data-wow-offset="25"> <img src="img/networks.png" alt="" class="technologies__item-img">
-        <b class="technologies__item-title">BLOCKCHAIN NETWORK</b>
-        <p class="technologies__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat soluta.</p>
-      </div>
-      <div class="technologies__item wow fadeIn" data-wow-offset="25"> <img src="img/media.svg" alt="" class="technologies__item-img">
-        <b class="technologies__item-title">Lorem ipsum.</b>
-        <p class="technologies__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat soluta.</p>
-      </div>
-      <div class="technologies__item wow fadeIn" data-wow-offset="25"> <img src="img/media.svg" alt="" class="technologies__item-img">
-        <b class="technologies__item-title">Lorem ipsum.</b>
-        <p class="technologies__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat soluta.</p>
+        <b class="technologies__item-title">closed blockchain</b>
+        <p class="technologies__item-text">We use only trusted servers for work</p>
       </div>
     </div>
   </div>
@@ -200,30 +158,30 @@
   <div class="partners__wrapper">
     <div class="partners">
       <div class="partners__title">Our partners</div>
-      <div class="partners__item wow fadeInRight" data-wow-offset="25"><img src="img/partner-1.png" alt="">
+      <div class="partners__item wow zoomIn" data-wow-offset="25"><img src="img/partner-1.png" alt="">
       </div>
-      <div class="partners__item wow fadeInRight" data-wow-offset="25"><img src="img/partner-2.png" alt="">
+      <div class="partners__item wow zoomIn" data-wow-offset="25"><img src="img/partner-2.png" alt="">
       </div>
-      <div class="partners__item wow fadeInRight" data-wow-offset="25"><img src="img/partner-3.jpg" alt="">
+      <div class="partners__item wow zoomIn" data-wow-offset="25"><img src="img/partner-3.jpg" alt="">
       </div>
-      <div class="partners__item wow fadeInRight" data-wow-offset="25"><img src="img/partner-4.jpg" alt="">
+      <div class="partners__item wow zoomIn" data-wow-offset="25"><img src="img/partner-4.jpg" alt="">
       </div>
-      <div class="partners__item wow fadeInRight" data-wow-offset="25"><img src="img/partner-5.png" alt="">
+      <div class="partners__item wow zoomIn" data-wow-offset="25"><img src="img/partner-5.png" alt="">
       </div>
-      <div class="partners__item wow fadeInRight" data-wow-offset="25"><img src="img/partner-6.png" alt="">
+      <div class="partners__item wow zoomIn" data-wow-offset="25"><img src="img/partner-6.png" alt="">
       </div>
     </div>
   </div>
   <div class="feedback-form__wrapper">
     <form action="" class="feedback-form">
       <div class="feedback-form__title">Contact form</div>
-      <div class="feedback-form__item wow fadeInUp" data-wow-offset="50">
+      <div class="feedback-form__item wow fadeInUp">
         <label for="name">Name</label><input type="text" id="name">
       </div>
-      <div class="feedback-form__item wow fadeInUp" data-wow-offset="50">
+      <div class="feedback-form__item wow fadeInUp">
         <label for="email">Email</label><input type="email" id="email">
       </div>
-      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="wow fadeInUp" data-wow-offset="50"></textarea>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="wow fadeInUp"></textarea>
       <button type="submit" class="wow fadeInUp">Send</button>
     </form>
   </div>
@@ -237,9 +195,7 @@
       <div class="page-footer__rights">2018 | BABLOCOIN | ALL RIGHT RESERVED</div>
     </footer>
   </div>
-  <script>
-    Site.init();
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/animatescroll.min.js"></script>
   <script src="js/main.min.js"></script>
